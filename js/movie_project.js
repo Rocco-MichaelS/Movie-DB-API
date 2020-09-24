@@ -9,7 +9,7 @@ const getMovies = () => fetch(apiURL)
         movies.forEach(({title, rating, id}) => {
             let divCreate = document.createElement("div")
             console.log(`id#${id} - ${title} - rating: ${rating}`)
-            divCreate.innerHTML = `id#${id} - ${title} - rating: ${rating} `
+            divCreate.innerHTML = `${title} - rating: ${rating} `
             htmlLoad.appendChild(divCreate)
              })
     // .catch(err => console.log('Error Loading Page!'))
@@ -20,28 +20,35 @@ console.log(getMovies())
 //Add Movie Function***********
 
 const addMovie = () =>{
+    let stars = document.getElementById('movieRating').value;
     let userInput = document.getElementById('addMovie').value;
     console.log(userInput)
     let createInput = document.createElement("div")
-    createInput.innerHTML = `${userInput}  `
+    createInput.innerHTML = `${userInput} - rating: ${stars}  `
     htmlLoad.appendChild(createInput)
 
-}
 //*****ADD to Glitch JSON Objects***********
-const addTitle = {
-    name: "" ,
-    rating: ""
-};
-const options = {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(addTitle),
-};
-fetch(apiURL, options)
-    .then( response => console.log(response) ) /* review was created successfully */
-    .catch( error => console.error(error) );
+
+    let addTitle = {
+        title: userInput,
+        rating: stars
+    };
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(addTitle),
+    };
+    fetch(apiURL, options)
+        .then( response => console.log(response) ) /* review was created successfully */
+        .catch( error => console.error(error) );
+
+}
+
+
+
+
 
 
 const url = 'http://www.omdbapi.com/?apikey='+ omdbAPIKEY + '&s='

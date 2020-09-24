@@ -8,21 +8,40 @@
 <h1>Movies To Watch Before You Die!</h1>
 <main id="movieList">
 </main>
+<br>
 <input type="search" id="addMovie"  placeholder="Add Your Favorite Movie Here!">
-<button type="button" id="addMovie" onclick="addMovie()">Add!</button>
+<button type="button" id="submitMovie" onclick="addMovie()">Add!</button>
 <br>
 <!--rating Button-->
-<input type="radio" id="star1" name="stars" value="one">
-<label for="star1">&#9734</label><br>
-<input type="radio" id="star2"name="stars" value="two">
-<label for="star2">&#9734 &#9734 </label><br>
-<input type="radio" id="star3" name="stars" value="three">
-<label for="star3">&#9734&#9734&#9734</label><br>
-<input type="radio" id="star4" name="stars" value="four">
-<label for="star4">&#9734&#9734&#9734&#9734</label>
+<section>
+</section>
 
-<button type="button" id="addRating" onclick="addMovie()">Add!</button>
-<button type="button" id="btnSearch" onclick="addMovie()">Add!</button>
+<form action="">
+
+    <select name="rating" id="movieRating">
+        <option value="" disabled selected>Rate The Movie</option>
+        <option value="star 1">&#9734</option>
+        <option value="star 2">&#9734&#9734</option>
+        <option value="star 3">&#9734&#9734&#9734</option>
+        <option value="star 4">&#9734&#9734&#9734&#9734</option>
+        <option value="star 5">&#9734&#9734&#9734&#9734&#9734</option>
+    </select>
+    <br>
+
+</form>
+
+
+
+<!--<input type="radio" id="star1" name="stars" value="one">-->
+<!--<label for="star1">&#9734</label><br>-->
+<!--<input type="radio" id="star2"name="stars" value="two">-->
+<!--<label for="star2">&#9734 &#9734 </label><br>-->
+<!--<input type="radio" id="star3" name="stars" value="three">-->
+<!--<label for="star3">&#9734&#9734&#9734</label><br>-->
+<!--<input type="radio" id="star4" name="stars" value="four">-->
+<!--<label for="star4">&#9734&#9734&#9734&#9734</label>-->
+
+
 <script src="js/keys.js"></script>
 <script src="js/movie_project.js"></script>
 </body>
