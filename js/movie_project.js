@@ -1,17 +1,15 @@
 
 
-const htmlLoad = document.getElementById('movieList');
+// const htmlLoad = document.getElementById('movieList');
 const apiURL = 'https://natural-nine-macaroni.glitch.me/movies'
 // Api request for Json movie objects/////////////
 const getMovies = () => fetch(apiURL)
     .then(response => response.json())
     .then(movies => {
+        let cardText = ''
         movies.forEach(({title, rating, id}) => {
-            let divCreate = document.createElement("div")
-            console.log(`id#${id} - ${title} - rating: ${rating}`)
-            divCreate.innerHTML = `${title} - rating: ${rating}`
-            htmlLoad.appendChild(divCreate)
-             })
+            cardText += `<div class="card"><h5>${title}</h5> <p> rating:${rating}</p> <a>id#:${id}</a></div> `
+            $('#movieList').html(cardText)})
     // .catch(err => console.log('Error Loading Page!'))
     })
 
@@ -29,7 +27,8 @@ const addMovie = () =>{
 
 //*****ADD to Glitch JSON Objects***********
 
-    let addTitle = {
+    let movieDetails = {
+        id: '',
         title: userInput,
         rating: stars
     };
@@ -38,17 +37,19 @@ const addMovie = () =>{
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(addTitle),
+        body: JSON.stringify(movieDetails),
     };
     fetch(apiURL, options)
         .then( response => console.log(response) ) /* review was created successfully */
         .catch( error => console.error(error) );
 
 }
+
 //*********Remove Object Function*************//
 const removeMovie = () => {
     let userRemove = document.getElementById('deleteMovie').value
     let selectDelete = document.querySelector('#movieList')
+
     console.log(selectDelete)
 }
 
