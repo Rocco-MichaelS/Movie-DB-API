@@ -24,7 +24,7 @@ const addMovie = () =>{
     let userInput = document.getElementById('addMovie').value;
     console.log(userInput)
     let createInput = document.createElement("div")
-    createInput.innerHTML = `${userInput} - rating: ${stars}  `
+    createInput.innerHTML = `${userInput} - rating: ${stars} `
     htmlLoad.appendChild(createInput)
 
 //*****ADD to Glitch JSON Objects***********
@@ -45,7 +45,12 @@ const addMovie = () =>{
         .catch( error => console.error(error) );
 
 }
-
+//*********Remove Object Function*************//
+const removeMovie = () => {
+    let userRemove = document.getElementById('deleteMovie').value
+    let selectDelete = document.querySelector('#movieList')
+    console.log(selectDelete)
+}
 
 
 
