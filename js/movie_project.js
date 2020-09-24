@@ -9,7 +9,7 @@ const getMovies = () => fetch(apiURL)
         movies.forEach(({title, rating, id}) => {
             let divCreate = document.createElement("div")
             console.log(`id#${id} - ${title} - rating: ${rating}`)
-            divCreate.innerHTML = `${title} - rating: ${rating} `
+            divCreate.innerHTML = `${title} - rating: ${rating}`
             htmlLoad.appendChild(divCreate)
              })
     // .catch(err => console.log('Error Loading Page!'))
