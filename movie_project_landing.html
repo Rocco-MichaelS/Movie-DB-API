@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Movie Project</title>
+    <link rel="stylesheet" href="css/movie.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
 <h1>Movies To Watch Before You Die!</h1>
+<div class="loader"></div>
 <main id="movieList">
 </main>
 <br>
@@ -28,8 +32,8 @@
 </form>
 <!--/rating button-->
 <!-------Start Delete Button-------->
-<input type="search" id="deleteMovie" placeholder="Find Movie You Don't Like Looking At">
-<button type="button" id="removeMovie" onclick="removeMovie()">Delete!</button>
+<!--<input type="search" id="deleteMovie" placeholder="Find Movie You Don't Like Looking At">-->
+<!--<button type="button" id="removeMovie" data-id="">Delete!</button>-->
 
 
 <script src="js/keys.js"></script>
