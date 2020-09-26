@@ -24,7 +24,12 @@
 
 <main class="container mt-3 " id="movieList">
     <div class="row">
-        <h3 class ="loader">Loading....</h3>
+        <div class="loader spinner-border text-success mt-5" role="status">
+            <h3 class ="loader">Loading....</h3>
+            <span class="sr-only">Loading...</span>
+        </div>
+
+
     <input class="form-control col-6 mr-2  bg-light text-dark" id="addMovie" type="search" placeholder="Add Your Favorite Movie Here!" aria-label="Search">
         <select class="form-control btn btn-outline-dark col-3 bg-info mr-2" name="rating" id="movieRating">
             <option value="" disabled selected>Rate!</option>
@@ -41,9 +46,6 @@
 </section>
 
 
-<!--<div class="spinner-border text-success mt-5" role="status">-->
-<!--    <span class="sr-only">Loading...</span>-->
-<!--</div>-->
 
 
 <br>

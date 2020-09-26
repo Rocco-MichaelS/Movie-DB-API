@@ -3,26 +3,25 @@
 const htmlLoad = document.getElementById('movieList');
 const apiURL = 'https://natural-nine-macaroni.glitch.me/movies'
 // Api request for Json movie objects/////////////
-const getMovies = () => fetch(apiURL)
-    .then(response => response.json())
-
-    .then(movies => {
+const getMovies = () => {
+    return fetch(apiURL)
+        .then(response => response.json())
+        .then(movies => {
             movies.forEach(({title, rating, id}) => {
-            let divCreate = document.createElement("div")
-            console.log(` ${title} - rating: ${rating}`)
-            divCreate.innerHTML = `<p class="movieClass"> ${title} - rating: ${rating}</p>
-                                     <button onclick="Delete(this)" 
-                                     data-rmv=${id} class="rmvBtn">remove</button>`
+                let divCreate = document.createElement("div")
+                console.log(` ${title} - rating: ${rating}`)
+                divCreate.innerHTML = `<p class="movieClass"> ${title} - rating: ${rating}</p>
+                                         <button onclick="Delete(this)" 
+                                         data-rmv=${id} class="rmvBtn">remove</button>`
 
-            htmlLoad.appendChild(divCreate)
-            divCreate.addEventListener("click", divCreate.remove)
-             })
-
-
-    })
-    .then(function (msg) {
-     $('.loader').hide();
-    })
+                htmlLoad.appendChild(divCreate)
+                divCreate.addEventListener("click", divCreate.remove)
+            })
+        })
+        .then(msg => {
+            $('.loader').hide();
+        });
+}
 
 
 console.log(getMovies())
@@ -71,7 +70,7 @@ const addMovie = () => {
 
 
 }
-
+//delete from Api******************
 const Delete = (id) => {
  let movieId = $(id).data('rmv')
     fetch(`${apiURL}/${movieId}`, {
