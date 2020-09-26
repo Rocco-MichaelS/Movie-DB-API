@@ -10,28 +10,24 @@
 </head>
 
 <body>
-
-
-<section onloadstart="myFunction()">
-
 <nav class="navbar navbar-light bg-primary d-flex justify-content-center">
     <a class="title navbar-brand ">Movies To Watch Before You Die!</a>
     <form class="form-inline">
     </form>
 </nav>
 
-
+<section onloadstart="myFunction()" class="mainContainer mt-1 mb-1 ml-2">
 
 <main class="container mt-3 " id="movieList">
     <div class="row">
         <div class="loader spinner-border text-success mt-5" role="status">
             <h3 class ="loader">Loading....</h3>
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only position-fixed">Loading...</span>
         </div>
 
 
-    <input class="form-control col-6 mr-2  bg-light text-dark" id="addMovie" type="search" placeholder="Add Your Favorite Movie Here!" aria-label="Search">
-        <select class="form-control btn btn-outline-dark col-3 bg-info mr-2" name="rating" id="movieRating">
+    <input class="form-control col-6 mr-2 ml-3 bg-light text-dark" id="addMovie" type="search" placeholder="Add Your Favorite Movie Here!" aria-label="Search">
+        <select class="form-control btn btn-outline-dark col-3 bg-primary mr-2" name="rating" id="movieRating">
             <option value="" disabled selected>Rate!</option>
             <option value="star 1">&#9734</option>
             <option value="star 2">&#9734&#9734</option>
@@ -39,7 +35,7 @@
             <option value="star 4">&#9734&#9734&#9734&#9734</option>
             <option value="star 5">&#9734&#9734&#9734&#9734&#9734</option>
         </select>
-        <button class="btn btn-outline-dark col-2 mr-2 bg-info mb-2" id="submitMovie" onclick="addMovie()" type="button">Add!</button>
+        <button class="btn btn-outline-dark col-2 mr-2 bg-primary mb-2" id="submitMovie" onclick="addMovie()" type="button">Add!</button>
     </div>
 </main>
 

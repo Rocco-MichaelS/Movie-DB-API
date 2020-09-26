@@ -10,9 +10,9 @@ const getMovies = () => {
             movies.forEach(({title, rating, id}) => {
                 let divCreate = document.createElement("div")
                 console.log(` ${title} - rating: ${rating}`)
-                divCreate.innerHTML = `<p class="movieClass"> ${title} - rating: ${rating}</p>
+                divCreate.innerHTML = `<p class="movieClass"> ${title} <br> rating: ${rating} <br>
                                          <button onclick="Delete(this)" 
-                                         data-rmv=${id} class="rmvBtn">remove</button>`
+                                         data-rmv=${id} class="rmvBtn">remove</button></p>`
 
                 htmlLoad.appendChild(divCreate)
                 divCreate.addEventListener("click", divCreate.remove)

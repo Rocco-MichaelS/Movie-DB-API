@@ -1,18 +1,31 @@
+button {
+    border-radius: 3px;
+}
 .form-control {
     /*max-width: 20em;*/
 }
-
+.mainContainer{
+    background-color: whitesmoke;
+    width: 55%;
+    height: 95%;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+}
 .rmvBtn {
     background-color: red;
-    margin-bottom: 2em;
-
-
+    margin-top: 1em;
+    margin-bottom: .5em;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 .title {
     font-family: Phosphate;
 }
 .movieClass {
     font-family: AppleGothic;
+    width: 10em;
+    border: 1px solid darkgray;
+    border-radius: 3px;
 
 }
 .loader {
