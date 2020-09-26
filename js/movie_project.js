@@ -5,6 +5,7 @@ const apiURL = 'https://natural-nine-macaroni.glitch.me/movies'
 // Api request for Json movie objects/////////////
 const getMovies = () => fetch(apiURL)
     .then(response => response.json())
+
     .then(movies => {
             movies.forEach(({title, rating, id}) => {
             let divCreate = document.createElement("div")
@@ -18,6 +19,9 @@ const getMovies = () => fetch(apiURL)
              })
 
 
+    })
+    .then(function (msg) {
+     $('.loader').hide();
     })
 
 
@@ -83,3 +87,6 @@ const Delete = (id) => {
         .catch(error => console.error('didnt work'));
 
 }
+// $(document).ready(function(){
+//     $('.loader').delay(300).hide(0);
+// })

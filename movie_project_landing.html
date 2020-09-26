@@ -8,19 +8,23 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
 
+<section onloadstart="myFunction()">
 
-<section >
-<nav class="navbar navbar-light bg-primary d-flex justify-content-center" >
+<nav class="navbar navbar-light bg-primary d-flex justify-content-center">
     <a class="title navbar-brand ">Movies To Watch Before You Die!</a>
     <form class="form-inline">
     </form>
 </nav>
-</section>
+
+
+
 <main class="container mt-3 " id="movieList">
     <div class="row">
+        <h3 class ="loader">Loading....</h3>
     <input class="form-control col-6 mr-2  bg-light text-dark" id="addMovie" type="search" placeholder="Add Your Favorite Movie Here!" aria-label="Search">
         <select class="form-control btn btn-outline-dark col-3 bg-info mr-2" name="rating" id="movieRating">
             <option value="" disabled selected>Rate!</option>
@@ -34,6 +38,7 @@
     </div>
 </main>
 
+</section>
 
 
 <!--<div class="spinner-border text-success mt-5" role="status">-->
