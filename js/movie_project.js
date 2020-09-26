@@ -49,11 +49,11 @@ const addMovie = () => {
         .then(data => console.log(data))
         .then(function (data) {appendData(data);})
         .catch(error => console.log(error))
-    function appendData(ombdData) {
+    function appendData(data) {
         let mainContainer = document.getElementById("mySearch");
-        for (let i = 0; i < ombdData.length; i++) {
+        for (let i = 0; i < data.length; i++) {
             let div = document.createElement("div");
-            div.innerHTML = `${ombdData[i].Title}`;
+            div.innerHTML = `${data[i].Title}`;
             console.log(div.innerHTML)
             mainContainer.appendChild(div);
         }
