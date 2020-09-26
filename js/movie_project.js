@@ -20,7 +20,9 @@ const getMovies = () => {
         })
         .then(msg => {
             $('.loader').hide();
+
         });
+
 }
 
 
@@ -44,11 +46,22 @@ const addMovie = () => {
     const url = 'http://www.omdbapi.com/?apikey='+omdbAPIKEY+'&s='+userInput+''
     const omdbDATA = () => fetch(url)
         .then(response => response.json())
+        .then(data => console.log(data))
+        .then(function (data) {appendData(data);})
+        .catch(error => console.log(error))
+    function appendData(ombdData) {
+        let mainContainer = document.getElementById("mySearch");
+        for (let i = 0; i < ombdData.length; i++) {
+            let div = document.createElement("div");
+            div.innerHTML = `${ombdData[i].Title}`;
+            console.log(div.innerHTML)
+            mainContainer.appendChild(div);
+        }
+    }
 
-                .then(data => console.log(data))
-                .catch(error => console.log(error))
 
-            console.log(omdbDATA())
+
+        console.log(omdbDATA())
 
 //*****ADD to Glitch JSON Objects***********
 
@@ -86,6 +99,3 @@ const Delete = (id) => {
         .catch(error => console.error('didnt work'));
 
 }
-// $(document).ready(function(){
-//     $('.loader').delay(300).hide(0);
-// })
