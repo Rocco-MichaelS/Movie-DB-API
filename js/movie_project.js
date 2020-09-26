@@ -9,9 +9,9 @@ const getMovies = () => fetch(apiURL)
             movies.forEach(({title, rating, id}) => {
             let divCreate = document.createElement("div")
             console.log(` ${title} - rating: ${rating}`)
-            divCreate.innerHTML = `${title} - rating: ${rating}
+            divCreate.innerHTML = `<p class="movieClass"> ${title} - rating: ${rating}</p>
                                      <button onclick="Delete(this)" 
-                                     data-rmv=${id}>Remove this Title</button>`
+                                     data-rmv=${id} class="rmvBtn">remove</button>`
 
             htmlLoad.appendChild(divCreate)
             divCreate.addEventListener("click", divCreate.remove)
@@ -30,9 +30,9 @@ const addMovie = () => {
     let userInput = document.getElementById('addMovie').value;
     console.log(userInput)
     let createInput = document.createElement("div")
-    createInput.innerHTML = `${userInput} - rating: ${stars}  
+    createInput.innerHTML = `<p class="movieClass">${userInput} - rating: ${stars}</p> 
                             <button onclick="Delete(this)" 
-                            id = "movieDel">delete</button>`
+                            id = "movieDel" class="rmvBtn">remove</button>`
     htmlLoad.appendChild(createInput)
     createInput.addEventListener("click", createInput.remove)
     createInput.addEventListener("click", Delete)
