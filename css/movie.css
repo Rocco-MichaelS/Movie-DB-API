@@ -1,3 +1,8 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
 button {
     border-radius: 3px;
 }
@@ -12,18 +17,23 @@ button {
     border-radius: 5px;
 }
 .rmvBtn {
-    background-color: red;
+    background-color: #A61D0E;
     margin-top: 1em;
     margin-bottom: .5em;
     margin-left: 2em;
     margin-right: 2em;
+}
+.rmvBtn:hover{
+    color: whitesmoke;
 }
 .title {
     font-family: Phosphate;
 }
 .movieClass {
     font-family: AppleGothic;
+    text-align: center;
     width: 10em;
+    height: auto;
     border: 1px solid darkgray;
     border-radius: 3px;
 
