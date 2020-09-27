@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/movie.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<h1>Test</h1>
-<!--Rocco's comment -->
-<!--Michael's comment-->
+<nav class="navbar navbar-light bg-primary d-flex justify-content-center">
+    <a class="title navbar-brand ">Movies To Watch Before You Die!</a>
+    <form class="form-inline">
+    </form>
+</nav>
+
+<section onloadstart="myFunction()" class="mainContainer mt-1 mb-1 ml-2">
+
+<main class="container mt-3 " id="movieList">
+    <div class="row mx-0">
+        <div class="loader spinner-border text-success mt-5" role="status">
+            <h3 class ="loader">Loading....</h3>
+            <span class="sr-only position-fixed">Loading...</span>
+        </div>
+
+
+    <input class="form-control col-6 mr-2 ml-3 bg-light text-dark" id="addMovie" type="search" placeholder="Add Your Favorite Movie Here!" aria-label="Search">
+        <select class="form-control btn btn-outline-dark col-3 bg-primary mr-2" name="rating" id="movieRating">
+            <option value="" disabled selected>Rate!</option>
+            <option value="star 1">&#9734</option>
+            <option value="star 2">&#9734&#9734</option>
+            <option value="star 3">&#9734&#9734&#9734</option>
+            <option value="star 4">&#9734&#9734&#9734&#9734</option>
+            <option value="star 5">&#9734&#9734&#9734&#9734&#9734</option>
+        </select>
+        <button class="btn btn-outline-dark col-2 mr-2 bg-primary mb-2" id="submitMovie" onclick="addMovie()" type="button">Add!</button>
+    </div>
+</main>
+</section>
+
+
+
+
+
+<br>
+<!--<input type="search" id="addMovie"  placeholder="Add Your Favorite Movie Here!">-->
+<!--<button type="button" id="submitMovie" onclick="addMovie()">Add!</button>-->
+<br>
+<!--rating Button-->
+<form action="">
+</form>
+
+<script src="js/keys.js"></script>
 <script src="js/movie_project.js"></script>
 </body>
 </html>
