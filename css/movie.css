@@ -12,7 +12,7 @@ button {
 .mainContainer{
     background-color: whitesmoke;
     width: 55%;
-    height: 95%;
+    min-height: 95%;
     border: 2px solid darkgray;
     border-radius: 5px;
 }
@@ -20,8 +20,7 @@ button {
     background-color: #A61D0E;
     margin-top: 1em;
     margin-bottom: .5em;
-    margin-left: 2em;
-    margin-right: 2em;
+    overflow: hidden;
 }
 .rmvBtn:hover{
     color: whitesmoke;

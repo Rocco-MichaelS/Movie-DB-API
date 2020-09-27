@@ -10,9 +10,9 @@ const getMovies = () => {
             movies.forEach(({title, rating, id}) => {
                 let divCreate = document.createElement("div")
                 console.log(` ${title} - rating: ${rating}`)
-                divCreate.innerHTML = `<p class="movieClass"> ${title} <br> rating: ${rating} <br>
+                divCreate.innerHTML = `<p class="col-3 py-1 movieClass"> ${title} <br> rating: ${rating} <br>
                                          <button onclick="Delete(this)" 
-                                         data-rmv=${id} class="rmvBtn">remove</button></p>`
+                                         data-rmv=${id} class="rmvBtn px-1">Remove</button><button onclick="updateData(this)">Update</button></p>`
 
                 htmlLoad.appendChild(divCreate)
                 divCreate.addEventListener("click", divCreate.remove)
@@ -33,9 +33,9 @@ const addMovie = () => {
     let userInput = document.getElementById('addMovie').value;
     console.log(userInput)
     let createInput = document.createElement("div")
-    createInput.innerHTML = `<p class="movieClass">${userInput} - rating: ${stars}</p> 
+    createInput.innerHTML = `<p class="col-3 py-1movieClass">${userInput} <br> rating: ${stars} <br> 
                             <button onclick="Delete(this)" 
-                            id = "movieDel" class="rmvBtn">remove</button>`
+                            id = "movieDel" class="rmvBtn">Remove</button></p>`
     htmlLoad.appendChild(createInput)
     createInput.addEventListener("click", createInput.remove)
     createInput.addEventListener("click", Delete)
@@ -86,6 +86,17 @@ const Delete = (id) => {
         .catch(error => console.error('didnt work'));
 
 }
-// $(document).ready(function(){
-//     $('.loader').delay(300).hide(0);
-// })
+
+const updateData = (movie) => {
+    fetch(`${apiURL}/${movie.id}`, {
+        method: 'PUT',
+        header: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(id)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(success)})
+        .catch(console.log(error));
+}
