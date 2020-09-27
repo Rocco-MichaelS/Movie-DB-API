@@ -33,12 +33,12 @@ const addMovie = () => {
     let userInput = document.getElementById('addMovie').value;
     console.log(userInput)
     let createInput = document.createElement("div")
-    createInput.innerHTML = `<p class="col-3 py-1movieClass">${userInput} <br> rating: ${stars} <br> 
+    createInput.innerHTML = `<p class="col-3  py-1movieClass">${userInput} <br> rating: ${stars} <br> 
                             <button onclick="Delete(this)" 
-                            id = "movieDel" class="rmvBtn">Remove</button></p>`
+                            id = "movieDel" class="rmvBtn">Remove</button> <button onclick="updateData(this)">Update</button></p>`
     htmlLoad.appendChild(createInput)
-    createInput.addEventListener("click", createInput.remove)
-    createInput.addEventListener("click", Delete)
+    document.getElementById('movieDel').addEventListener("click", createInput.remove)
+    document.getElementById("movieDel").addEventListener("click", Delete)
 
     //OMDB Movie Data********************
     const url = 'http://www.omdbapi.com/?apikey='+omdbAPIKEY+'&s='+userInput+''
@@ -93,10 +93,10 @@ const updateData = (movie) => {
         header: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(id)
+        body: JSON.stringify(movie.id)
     })
         .then(res => res.json())
         .then(data => {
-            console.log(success)})
-        .catch(console.log(error));
+            console.log('success')})
+        .catch(console.log('error'));
 }
