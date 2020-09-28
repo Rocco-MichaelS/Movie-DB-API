@@ -12,10 +12,10 @@ const getMovies = () => {
                 console.log(` ${title} - rating: ${rating}`)
                 divCreate.innerHTML = `<p class="col-3 py-1 movieClass"> ${title} <br> rating: ${rating} <br>
                                          <button onclick="Delete(this)" 
-                                         data-rmv=${id} class="rmvBtn px-1">Remove</button><button onclick="updateData(this)">Update</button></p>`
+                                         data-rmv=${id} id='remove' class="rmvBtn px-1">Remove</button><button onclick="updateData(this)">Update</button></p>`
 
                 htmlLoad.appendChild(divCreate)
-                divCreate.addEventListener("click", divCreate.remove)
+                document.getElementById('remove').addEventListener("click", divCreate.remove)
             })
         })
         .then(msg => {
