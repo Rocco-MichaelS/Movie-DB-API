@@ -10,12 +10,21 @@ html, body{
     width: 100%;
 }
 .navbar {
+
     color: white;
     /*max-height: ;*/
     background-image: url("../images/2001 img.jpg");
     background-size: 70em;
     background-position-x: 70px;
 }
+.addBar {
+    background-image: url("../images/deathstar background image.jpg");
+    width: 40em;
+    position: sticky;
+
+
+}
+
 
 button {
     border-radius: 3px;
@@ -24,11 +33,15 @@ button {
     /*max-width: 20em;*/
 }
 .mainContainer{
-    background-color: whitesmoke;
+    /*background-image: url("../images/tron.jpeg");*/
+    background-size: 20em;
+    background-color: blanchedalmond;
+    background-position-x: 20em;
     width: 55%;
-    min-height: 95%;
+    height: 55em;
     border: 2px solid darkgray;
     border-radius: 5px;
+    overflow: scroll;
 }
 .rmvBtn {
     background-color: #A61D0E;
@@ -42,12 +55,12 @@ button {
 
 .title {
 
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-family: 'Bangers', cursive;
     color: white;
 }
 .movieClass {
-
+    background-color: whitesmoke;
     font-family: 'Bangers';
     text-align: center;
     min-width: 10em;
@@ -62,4 +75,8 @@ button {
  }
 .loader {
     /*display: none;*/
+}
+.Add {
+    font-family: 'Bangers';
+    background-color: darkseagreen;
 }

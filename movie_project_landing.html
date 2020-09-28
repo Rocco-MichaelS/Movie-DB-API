@@ -12,24 +12,24 @@
 </head>
 
 <body>
-<nav class=" navbar jumbotron  bg-primary d-flex justify-content-center">
+<nav class="navbar jumbotron  bg-primary d-flex justify-content-center">
     <h1 class="title navbar-brand">Movies To Watch Before You Die!</h1>
     <form class="form-inline">
     </form>
 </nav>
+<div class="container">
+<section onloadstart="myFunction()" class="mainContainer mt-1 mb-1 ml-2">
 
-<section onloadstart="myFunction()" class="mainContainer mt-1 mb-1 ml-2">"
-
-<main class="container mt-3 " id="movieList">
+<main class=" mt-3 " id="movieList">
     <div class="row mx-0">
         <div class="loader spinner-border text-success mt-5" role="status">
-            <h3 class ="loader">Loading....</h3>
+            <h3 class ="loader">   Loading</h3>
             <span class="sr-only position-fixed">Loading...</span>
         </div>
 
-
-    <input class="form-control col-lg-6 col-sm-12 mr-2 ml-3 bg-light text-dark" id="addMovie" type="search" placeholder="Add Your Favorite Movie Here!" aria-label="Search">
-        <select class="form-control btn btn-outline-dark col-lg-3 col-sm-12 mt-2 bg-primary mr-2" name="rating" id="movieRating">
+<section class="addBar navbar mb-2 ">
+    <input class="form-control col-lg-6 col-sm-12 mr-2 mt-2 bg-light text-dark" id="addMovie" type="search" placeholder="Add Your Favorite Movie Here!" aria-label="Search">
+        <select class="form-control btn btn-outline-dark col-lg-3 col-sm-12 mt-2 bg-light mr-2" name="rating" id="movieRating">
             <option value="" disabled selected>Rate!</option>
             <option value="star 1">&#9734</option>
             <option value="star 2">&#9734&#9734</option>
@@ -37,10 +37,13 @@
             <option value="star 4">&#9734&#9734&#9734&#9734</option>
             <option value="star 5">&#9734&#9734&#9734&#9734&#9734</option>
         </select>
-        <button class="btn btn-outline-dark col-lg-2 col-sm-12 mr-2 bg-primary mb-2 mt-2" id="submitMovie" onclick="addMovie()" type="button">Add!</button>
+        <button class="Add btn btn-outline-dark col-lg-2 col-sm-12 mr-2  mb-2 mt-3" id="submitMovie" onclick="addMovie()" type="button">Add!</button>
+</section>
     </div>
 </main>
 </section>
+</div>
+
 <article>
     <form>
         <div class="form-group">
