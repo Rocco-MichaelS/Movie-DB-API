@@ -1,6 +1,20 @@
+body {
+    background-image: url("https://media.giphy.com/media/Vw3k4Vro0Q5KE/giphy.gif");
+    background-size: cover;
+
+}
+
 html, body{
+
     height: 100%;
     width: 100%;
+}
+.navbar {
+    color: white;
+    /*max-height: ;*/
+    background-image: url("../images/2001 img.jpg");
+    background-size: 70em;
+    background-position-x: 70px;
 }
 
 button {
@@ -25,18 +39,27 @@ button {
 .rmvBtn:hover{
     color: whitesmoke;
 }
+
 .title {
-    font-family: Phosphate;
+
+    font-size: 1.7rem;
+    font-family: 'Bangers', cursive;
+    color: white;
 }
 .movieClass {
-    font-family: AppleGothic;
+
+    font-family: 'Bangers';
     text-align: center;
-    width: 10em;
+    min-width: 10em;
     height: auto;
     border: 1px solid darkgray;
     border-radius: 3px;
 
 }
+
+ #update{
+     color: antiquewhite;
+ }
 .loader {
     /*display: none;*/
 }

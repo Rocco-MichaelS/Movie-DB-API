@@ -15,8 +15,10 @@ const getMovies = () => {
                                          data-rmv=${id} id='remove' class="rmvBtn px-1">Remove</button><button onclick="updateData(this)">Update</button></p>`
 
                 htmlLoad.appendChild(divCreate)
-                document.getElementById('remove').addEventListener("click", divCreate.remove)
+                divCreate.addEventListener("click", divCreate.remove)
+                divCreate.addEventListener("click", Delete)
             })
+
         })
         .then(msg => {
             $('.loader').hide();
@@ -33,12 +35,12 @@ const addMovie = () => {
     let userInput = document.getElementById('addMovie').value;
     console.log(userInput)
     let createInput = document.createElement("div")
-    createInput.innerHTML = `<p class="col-3  py-1movieClass">${userInput} <br> rating: ${stars} <br> 
+    createInput.innerHTML = `<p class="movieClass col-lg-3 col-sm-12  py-1">${userInput} <br> rating: ${stars} <br> 
                             <button onclick="Delete(this)" 
                             id = "movieDel" class="rmvBtn">Remove</button> <button onclick="updateData(this)">Update</button></p>`
     htmlLoad.appendChild(createInput)
-    document.getElementById('movieDel').addEventListener("click", createInput.remove)
-    document.getElementById("movieDel").addEventListener("click", Delete)
+    createInput.addEventListener("click", createInput.remove)
+    createInput.addEventListener("click", Delete)
 
     //OMDB Movie Data********************
     const url = 'http://www.omdbapi.com/?apikey='+omdbAPIKEY+'&s='+userInput+''
