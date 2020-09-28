@@ -10,7 +10,7 @@ html, body{
     width: 100%;
 }
 .navbar {
-
+    min-width: 100%;
     color: white;
     /*max-height: ;*/
     background-image: url("../images/2001 img.jpg");
@@ -37,11 +37,12 @@ button {
     background-size: 20em;
     background-color: blanchedalmond;
     background-position-x: 20em;
-    width: 55%;
+    width: 30em;
     height: 55em;
     border: 2px solid darkgray;
     border-radius: 5px;
     overflow: scroll;
+    margin-left: -1em;
 }
 .rmvBtn {
     background-color: #A61D0E;
@@ -63,7 +64,8 @@ button {
     background-color: whitesmoke;
     font-family: 'Bangers';
     text-align: center;
-    min-width: 10em;
+    min-width: 15em;
+
     height: auto;
     border: 1px solid darkgray;
     border-radius: 3px;
@@ -72,6 +74,7 @@ button {
 
  #update{
      color: antiquewhite;
+     background-color: black;
  }
 .loader {
     /*display: none;*/
