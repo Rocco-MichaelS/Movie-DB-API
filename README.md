@@ -1,3 +1,3 @@
 # Movie-DB-API
 Restful Api Movie Database Pairing Project
-Why is the rest not showing?git 
+Why is the rest not showing?
